@@ -12,7 +12,7 @@ collections:
     label: "Guest Artist"
     folder: "site/content/guest-artist"
     create: true
-    identified_field: name
+    identifier_field: name
     fields:
       - {name: "name", label: "Name", widget: "string"}
       - {name: "headshot", label: "Headshot", widget: "image", required: false}
