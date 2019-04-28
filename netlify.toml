@@ -1,5 +1,6 @@
 [build.environment]
   YARN_VERSION = "1.12.1"
+  HUGO_VERSION = "0.55.4"
 
 [build]
   command = "yarn build"
