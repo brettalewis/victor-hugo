@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: master
+
+publish_mode: editorial_workflow
+
+media_folder: "site/static/img"
+public_folder: "img"
+
+collections:
+  - name: "guest-artist"
+    label: "Guest Artist"
+    folder: "site/content/guest-artist"
+    create: true
+    fields:
+      - {label: "name", name: "Name", widget: "string"}
+      - {label: "headshot", name: "Headshot", widget: "image"}
+      - {label: "bio", name: "Bio", widget: "text"}

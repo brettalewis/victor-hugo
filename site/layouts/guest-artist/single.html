@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+  <section>
+    {{ if .Params.headshot }}
+    <figure>
+        <img src="{{ .Params.headshot }}">
+    </figure>
+    {{ end }}
+    <h5>{{ .Params.name }}</h5>
+    {{ .Params.bio }}
+  </section>
+
+{{ end }}
