@@ -8,12 +8,32 @@ media_folder: "site/static/img"
 public_folder: "img"
 
 collections:
-  - name: "guest-artist"
-    label: "Guest Artist"
-    folder: "site/content/guest-artist"
+  - name: "genres"
+    label: "Genres"
+    label_singular: "Genre"
+    folder: "site/content/genres"
+    create: true
+    fields:
+      - {name: "title", label: "Title", widget: "string"}
+      - {name: "description", label: "Description", widget: "text"}
+  - name: "guest-artists"
+    label: "Guest Artists"
+    label_singular: "Guest Artist"
+    folder: "site/content/guest-artists"
     create: true
     identifier_field: name
     fields:
       - {name: "name", label: "Name", widget: "string"}
       - {name: "headshot", label: "Headshot", widget: "image", required: false}
       - {name: "bio", label: "Bio", widget: "text"}
+  - name: "teachers"
+    label: "Teachers"
+    label_singular: "Teacher"
+    folder: "site/content/teachers"
+    create: true
+    identifier_field: name
+    fields:
+      - {name: "name", label: "Name", widget: "string"}
+      - {name: "headshot", label: "Headshot", widget: "image", required: false}
+      - {name: "bio", label: "Bio", widget: "text"}
+      - {name: "genres", label: "Genres", widget: "relation", collection: "genres", searchFields: ["title"], valueField: "title", multiple: true}
